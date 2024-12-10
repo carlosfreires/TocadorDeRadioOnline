@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <defs>
+    <!-- Gradiente para o corpo principal de Júpiter -->
+    <radialGradient id="jupiter-body" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F4A460" />
+      <stop offset="100%" stop-color="#A0522D" />
+    </radialGradient>
+    <!-- Faixas de gás -->
+    <linearGradient id="jupiter-bands" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E9967A" />
+      <stop offset="25%" stop-color="#FFE4B5" />
+      <stop offset="50%" stop-color="#CD853F" />
+      <stop offset="75%" stop-color="#FFE4B5" />
+      <stop offset="100%" stop-color="#E9967A" />
+    </linearGradient>
+    <!-- Gradiente para a atmosfera -->
+    <linearGradient id="jupiter-atmosphere" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#A0522D" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#F4A460" stop-opacity="0.2" />
+    </linearGradient>
+    <!-- Gradiente para o anel -->
+    <linearGradient id="jupiter-ring" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B4513" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#D2691E" stop-opacity="0.3" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Hemisfério Inferior (Sul) -->
+  <path d="M75,150 h150 a75,75 0 0,1 -75,75 a75,75 0 0,1 -75,-75 z" fill="url(#jupiter-body)" />
+
+  <!-- Anel de Júpiter -->
+  <ellipse cx="150" cy="150" rx="110" ry="50" fill="url(#jupiter-ring)" />
+
+
+
+   <!-- Hemisfério Superior (Norte) -->
+  <path d="M75,150 h150 a75,75 0 0,0 -75,-75 a75,75 0 0,0 -75,75 z" fill="url(#jupiter-body)" />
+
+  
+  <!-- Atmosfera no hemisfério sul -->
+  <path d="M75,150 h150 a75,75 0 0,1 -75,75 a75,75 0 0,1 -75,-75 z" fill="url(#jupiter-atmosphere)" />
+  
+
+
+
+</svg>
+

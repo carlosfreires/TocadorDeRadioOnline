@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Workbench&display=swap');
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 400 to 900
+
+.orbitron-font {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+  }
+
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&family=Orbitron:wght@400..900&family=Workbench&display=swap');
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 300 to 900
+
+.darker-grotesque-font {
+    font-family: "Darker Grotesque", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+  }
+  
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Darker+Grotesque:wght@300..900&family=Orbitron:wght@400..900&family=Workbench&display=swap');
+
+.concert-one-regular {
+  font-family: "Concert One", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Darker+Grotesque:wght@300..900&family=Orbitron:wght@400..900&family=Quicksand:wght@300..700&family=Workbench&display=swap');
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 300 to 700
+
+.quicksand-font {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}

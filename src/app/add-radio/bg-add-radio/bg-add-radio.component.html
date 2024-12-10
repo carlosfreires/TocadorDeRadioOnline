@@ -1,0 +1,37 @@
+<section class="conteinerBg">
+    <div class='conteiner'>
+        <svg class="sol" style="z-index: 1;" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <filter id="glow">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="15" result="blur"/>
+                    <feMerge>
+                        <feMergeNode in="blur"/>
+                        <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                </filter>
+            </defs>
+            <image class="sol" href="svg/sistema_solar/sol.svg" x="5" y="50" width="100" height="100" filter="url(#glow)" />
+        </svg>
+        <span class="netuno">
+            <img style="width: 40px;"  id="netuno" src="svg/sistema_solar/netuno.svg">
+        </span>            
+        <span class="urano">
+            <img style="width: 50px;" id="urano" src="svg/sistema_solar/uranos.svg">
+        </span>
+        <span class="saturno">
+            <img style="width: 90px;" id="saturno" src="svg/sistema_solar/saturno.svg">
+        </span>
+        <span class="jupiter">
+            <img  style="width: 150px;"  id="jupiter" src="svg/sistema_solar/jupiter.svg">
+        </span>
+        <span class="marte">
+            <img style="width: 60px;" id="marte" src="svg/sistema_solar/marte.svg">
+        </span>
+        <span class="venus">
+            <img style="width: 110px;" id="venus" src="svg/sistema_solar/venus.svg">
+        </span>
+        <span  class="mercurio">
+            <img style="width: 30px;" id="mercurio" src="svg/sistema_solar/mercurio.svg">
+        </span>
+    </div>
+</section>

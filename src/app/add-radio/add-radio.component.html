@@ -1,0 +1,35 @@
+<section class="areaRolagemEstacoes">
+    <h2>Lista de Estações</h2>
+    <ul class="InfoEstacoes">
+        <li *ngFor="let estacao of listaEstacoes; let i = index">
+            <div class="nomeEstacao">
+                {{ estacao.nome }}
+            </div>
+            <button class="botaoRemover" (click)="removerEstacao(i)" >EXCLUIR</button>
+            <div class="darker-grotesque-font" class="linkEstacao">
+                <span>{{ estacao.url }}</span>
+            </div>
+        </li>
+    </ul>
+</section>
+
+<section class="conteiner">
+    <div class="addNovaEstacao"></div>
+    <h3>adicionar nova estação </h3>
+    <form (ngSubmit)="addNovaEstacao()" class="form">
+        <div class="input">
+            <label for="nomeEstacao" >nome da estação</label>
+            <input [(ngModel)]="novaEstacao.nome" name="nomeEstacao" id="nomeEstacao" required maxlength="27" placeholder="Nome da estação" type="text"/>
+            <br/>
+            <label for="descEstacao" >descrição </label>
+            <input [(ngModel)]="novaEstacao.desc" maxlength="50" name="descEstacao" id="descEstacao" placeholder="Digite uma descrição" type="text"/>
+            <br/>
+            <label for="urlEstacao" >url </label>
+            <input [(ngModel)]="novaEstacao.url" required maxlength="3000" name="urlEstacao" id="urlEstacao" placeholder="url da estação" type="text"/>
+        </div>
+        <br/>
+        <button type="submit">ADICIONAR ESTAÇÃO</button>
+    </form>
+</section>
+
+<app-bg-add-radio></app-bg-add-radio>

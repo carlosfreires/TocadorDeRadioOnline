@@ -1,0 +1,311 @@
+* {
+  box-sizing: border-box;
+  margin-top: -10px;
+}
+
+.areaRolagemEstacoes {
+  position: absolute;
+  top: 170px;
+  left: 25px;
+  width: 550px;
+  height: 440px;
+  z-index: 10;
+  border-radius: 10px;
+  background: transparent;
+
+}
+
+.areaRolagemEstacoes h2 {
+  display: none; 
+}
+
+.InfoEstacoes {
+  position: fixed;
+  padding-top: 5px;
+  padding-right: 30px;
+  padding-left: 0;
+  height: 300px;  
+  width: 500px;
+  border-radius: 5%;
+  margin: 0;
+  overflow: hidden;
+  overflow-y: scroll; 
+  cursor: pointer;
+}
+
+// Estilização da barra de rolagem
+.InfoEstacoes::-webkit-scrollbar {
+  width: 12px;
+  background-color: transparent;  
+}
+
+// Estilizando o "polegar" (a parte que você clica e arrasta) 
+.InfoEstacoes::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #df7721, #b11ad6);
+  border-radius: 10px;
+  border: 3px solid transparent; 
+  box-shadow: 0 0 8px #df7721, 0 0 15px #b11ad6, 0 0 20px #df7721; 
+}
+
+// Mudando a cor do polegar quando o mouse passa sobre ele 
+.InfoEstacoes::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #b11ad6, #df7721);
+  box-shadow: 0 0 20px #df7721, 0 0 40px #b11ad6, 0 0 60px #df7721;
+}
+
+// Estilizando a área da barra de rolagem (onde o polegar se move) 
+.InfoEstacoes::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 10px; 
+}
+
+.InfoEstacoes li {
+  list-style-type: none;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #df7721, #b11ad6);
+  padding: 20px;
+  margin-left: 10px;
+  margin-top: 15px;
+  box-shadow: 0 0 15px #b01ad681, 0 0 40px #df772181;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.InfoEstacoes li:hover {
+  background: linear-gradient(135deg, #b11ad6, #df7621);
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 40px #df7621 , 0 12px 24px #b11ad6;
+}
+
+.botaoRemover {
+  background: linear-gradient(135deg, #fffb00, #ff0202);
+  position: relative;
+  width: 100px;
+  top: -15px;
+  left: 300px;
+  padding: 3px;
+  cursor: pointer;
+  border-radius: 20px;
+  -webkit-text-stroke: 0.2px rgb(255, 0, 0);
+  border: 0;
+  font-family: "Concert One", sans-serif;
+  font-size: 20px;
+  color: #000000;
+}
+
+.botaoRemover:hover {
+  box-shadow: 0 6px 15px rgba(255, 2, 2, 0.7); 
+  transform: scale(1.05);
+}
+
+.botaoRemover:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 5px rgba(255, 2, 2, 0.3);
+  background: linear-gradient(135deg, #d4d200, #b00000);
+}
+
+
+.nomeEstacao {
+  background-color: #df7621;
+  font-family: "Concert One", sans-serif;
+  text-transform: uppercase;
+  border-radius: 10px 0px 0px 0px;
+  width: 150px;
+  height: 20px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.linkEstacao {
+  background-color: #df7621;
+  padding-left: 10px;
+  font-family: "Darker Grotesque", sans-serif;
+  width: 400px;
+  overflow: hidden;
+  
+}
+
+.conteiner h3 {
+  display: none;
+}
+
+.conteiner  {
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.addNovaEstacao {
+  position: absolute;
+  border: 0;
+  padding: 0;
+  top: 150px;
+  left: 550px;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  z-index: 5;
+  background-image: url('/svg/sistema_terra/terra.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transform-style: preserve-3d;
+  pointer-events: auto;
+  animation: girar 100s infinite linear;
+}
+
+@keyframes girar {
+  0% {
+    transform: translate(0px, 0px)  scale3d(0.7, 0.7, 0.7) rotate(0deg);
+  }
+  25% {
+    transform: translate(3px, -3px)  scale3d(0.8, 0.8, 0.8) rotate(-90deg);
+  }
+  50% {
+    transform: translate(6px, -6px)  scale3d(0.9, 0.9, 0.9) rotate(-180deg)
+  }
+  75% {
+    transform: translate(3px, -3px)  scale3d(0.8, 0.8, 0.8) rotate(-240deg);
+  }
+  100% {
+    transform: translate(0px, 0px) scale3d(0.7, 0.7, 0.7) rotate(-360deg);
+  }
+}
+
+.form {
+  border: 1px solid transparent;
+  position: absolute;
+  top: 240px;
+  left: 670px;
+  width: 210px;
+  border-radius: 50%;
+  height: 210px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 6;
+  cursor: text;
+}
+
+.form label {
+  display: none;
+}
+
+.input {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+  top: 128px;
+  left: 100px;
+  width: 300px;
+  height: 100px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.input input {
+  text-align: center;
+  font-size: 16px;
+  border-radius: 10px;
+  font-size: 23px;
+  color: #420352;
+  font-family: "Concert One", sans-serif; 
+  &:focus {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+.addNovaEstacao:hover + .input,
+.form:hover .input {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.form button {
+  position: relative;
+  top: -135px;
+  left: 85px;
+  font-family: "Quicksand", sans-serif;
+  background-color: transparent;
+  background-image: url('/svg/sistema_terra/lua.svg');
+  color: #fffc65;
+  background-repeat: no-repeat; 
+  background-size: 100% 100%; 
+  border: none;
+  color: transparent;
+  border-radius: 50%;
+  width: 95px;
+  height: 95px;
+  padding: 0;
+  z-index: 2;
+  cursor: pointer;
+  pointer-events: none;
+  transform-origin: -50px center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, font-size 1.5 ease-in-out;
+  animation: moveAroundForm 10s linear infinite;
+}
+
+@keyframes moveAroundForm {
+  0% {
+    transform: rotate(0deg) translateX(100px) scale(0.5);
+  }
+  20% {
+    transform: rotate(72deg) translateX(100px) scale(0.7);
+  }
+  40% {
+    transform: rotate(144deg) translateX(100px) scale(0.9);
+  }
+  60% {
+    transform: rotate(216deg) translateX(100px) scale(0.9);
+  }
+  80% {
+    transform: rotate(288deg) translateX(100px) scale(0.7);
+  }
+  100% {
+    transform: rotate(360deg) translateX(100px) scale(0.5);
+  }
+}
+
+.addNovaEstacao:hover + .form button,
+.form:hover button {
+  pointer-events: auto;
+  animation: none;
+  transform: translate(100px, 0) scale(0.5);
+  transition: transform 0.5s ease-out;
+}
+
+.input:hover ~ button {
+  transform: scale(1.7);
+  box-shadow: 0 0 15px #fd520f2c, 0 0 25px #ffef0c2a;
+  color: #ff0000;
+  -webkit-text-stroke: 0.3px rgb(247, 0, 255);
+  text-shadow: 
+  2px 2px 2px rgba(251, 255, 4, 0.486),
+  -2px -2px 2px rgba(255, 0, 0, 0.534),
+  1px 1px 2px rgba(255, 0, 170, 0.521);
+}
+
+.form button:hover {
+  transform: scale(1.7); /* Aumenta ligeiramente o botão ao passar o mouse */
+  box-shadow: 0 0 15px #fd520f2c, 0 0 25px #ffef0c2a; /* Adiciona um brilho colorido ao redor do botão */
+  border: none;
+  color: #ff0000;
+  -webkit-text-stroke: 0.3px rgb(247, 0, 255);
+  font-size: 18px;
+  text-align: center;
+  transition: font-size 1.5 ease-in-out;
+  text-shadow: 
+  2px 2px 2px rgba(251, 255, 4, 0.486),
+  -2px -2px 2px rgba(255, 0, 0, 0.534),
+  1px 1px 2px rgba(255, 0, 170, 0.521);
+}
+
+.form button:active {
+  box-shadow: 0 0 15px #ff00003f, 0 0 25px #ffff0050, inset 0 0 10px;// #ffffff; /* Adiciona sombras intensas ao clicar */
+  background-color: #ffff0034;
+  border: none;
+}

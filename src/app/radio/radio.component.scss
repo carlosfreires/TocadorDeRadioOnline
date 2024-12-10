@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.tocadorDeRadio {
+  position: fixed;
+  border: 0;
+  background-color: transparent;
+  color: white;
+  width: 100%;
+  margin-left: -12px;
+  margin-top: -8px;
+}
+
+.display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  border: 0;
+  margin: 0;
+  background: linear-gradient(90deg, #b01ad62c, #df772128);
+  border-radius: 15px;
+  box-shadow: 0 0 20px #b11ad6, 0 0 40px #df7621; /* Efeito de box-shadow constante */
+  width: 105%;
+  height: 80px;
+  font-size: 70px;
+  font-family: "Orbitron", sans-serif;
+  color: #ffffff;
+  overflow: hidden;
+  position: relative;
+
+  &:hover {
+      animation: trailEffect 1.5s linear infinite;
+  }
+
+  @keyframes trailEffect {
+    0% {
+      box-shadow: 0 0 10px #b11ad6, 0 0 20px #df7621, 0 0 30px #b11ad6;
+    }
+    100% {
+      box-shadow: 0 0 5px #df7621, 0 0 15px #b11ad6, 0 0 25px #df7621;
+    }
+  }
+
+  .texto {
+    display: inline-block;
+    white-space: nowrap;
+    width: 100%; 
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &.exibe-estacao .texto > div {
+      display: inline-block;
+      animation: scrollText 20s linear infinite;
+      white-space: nowrap;
+  }
+
+  &.exibe-player .texto > div {
+      animation: none; /* Texto fica estático */
+  }
+
+  @keyframes scrollText {
+      0% {
+          transform: translateX(100%);
+      }
+      100% {
+          transform: translateX(-100%);
+      }
+  }
+}
+
+.particle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #b11ad6, #df7621);
+  box-shadow: 0 0 10px #b11ad6, 0 0 15px #df7621;
+  pointer-events: none;
+  animation: fadeOut 1s ease-in-out;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+.botaoRadio {
+  background: linear-gradient(135deg, #b01ad61c, #df772134);
+  width: 102%;
+  text-align: center;
+  background-color: transparent;
+}
+
+.botaoRadio button {
+  width: 120px;
+  height: 50px;
+  background: linear-gradient(135deg, #b11ad6, #df7621);
+  border: none;
+  color:  #fffbbf;
+  font-size: 25px;
+  font-family: "Concert One", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 0 10px #b11ad6, 0 0 20px #df7621;
+  transition: background 0.5s ease, box-shadow 0.5s ease;
+}
+
+.botaoRadio button:hover {
+  background: linear-gradient(135deg, #df7621, #b11ad6);
+  box-shadow: 0 0 15px #df7621, 0 0 25px #b11ad6;
+}
+
+.botaoRadio button:active {
+  transform: scale(0.95); /* Simula o pressionamento */
+  box-shadow: 0 0 5px #df7621, 0 0 10px #b11ad6; /* Reduz a intensidade da sombra */
+}
+
+.volume input[type="range"] {
+  -webkit-appearance: none;
+  position: fixed;
+  left: 332px;
+  appearance: none;
+  width: 500px;
+  height: 10px;
+  border-radius: 5px;
+  cursor:inherit;
+  outline: none;
+  background: linear-gradient(90deg, #b11ad6 50%, #df7621 50%);
+  box-shadow: 0 0 10px #b11ad6, 0 0 20px #df7621;
+  transition: background 0.2s ease;
+}
+
+.volume input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, #b11ad6, #df7621);
+  border-radius: 50%;
+  box-shadow: 0 0 10px #b11ad6, 0 0 20px #df7621;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.volume input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, #b11ad6, #df7621);
+  border-radius: 50%;
+  box-shadow: 0 0 10px #b11ad6, 0 0 20px #df7621;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
