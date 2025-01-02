@@ -54,5 +54,6 @@ ng generate component nome-do-componente
 ```
 Para mais informações sobre o Angular CLI e seus comandos, acesse a [Documentação do Angular CLI](https://angular.dev/tools/cli).
 
-Licença
+### Licença
+
 Este projeto está licenciado sob a Licença MIT.
