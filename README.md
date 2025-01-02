@@ -1,59 +1,58 @@
-# RepRadioOnline
+# RepRadioOnline (Tocador de Radio Online)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.2.
+Este projeto é um **tocador de rádio online**, desenvolvido com o framework [Angular CLI](https://github.com/angular/angular-cli) version 19.0.2., que permite a reprodução de links de áudio de rádios online ou de outras fontes no mesmo formato.
+O layout do projeto homenageia a **astronomia** e a **ufologia**, com uma réplica animada do sistema solar e uma nave espacial no ponteiro do mouse.
 
-## Development server
+## Funcionalidades
 
-To start a local development server, run:
+- Reproduz links de áudio de rádios online.
+- Layout temático inspirado no sistema solar e na ufologia.
+- Nave de ET animada no ponteiro do mouse.
+
+## Instruções de Desenvolvimento
+
+### Pré-requisitos
+
+Para rodar o projeto localmente, é necessário ter o **Node.js** e o **Angular CLI** instalados. Caso não tenha o Angular CLI, instale com o seguinte comando:
+
+```bash
+npm install -g @angular/cli
+```
+
+### Servidor de Desenvolvimento
+
+Para iniciar o servidor de desenvolvimento local, utilize o comando:
 
 ```bash
 ng serve
 ```
+Isso iniciará o servidor na URL [http://localhost:4200/](http://localhost:4200/), e a aplicação será recarregada automaticamente sempre que houver alterações nos arquivos de código.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### Construção do Projeto
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
+Para gerar a versão de produção do projeto, execute o comando:
 ```bash
-ng generate component component-name
+ng build --prod
 ```
+Esse comando compilará o projeto e armazenará os artefatos de build na pasta dist/, otimizando a aplicação para melhor performance.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+### Testes Unitários
+Para rodar os testes unitários com o Karma, use:
 
 ```bash
 ng test
 ```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
+### Testes End-to-End (E2E)
+Para realizar testes end-to-end, execute o comando:
 ```bash
 ng e2e
 ```
+### Gerenciamento de Componentes
+Caso queira gerar novos componentes, execute:
+```bash
+ng generate component nome-do-componente
+```
+Para mais informações sobre o Angular CLI e seus comandos, acesse a [Documentação do Angular CLI](https://angular.dev/tools/cli).
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Licença
+Este projeto está licenciado sob a Licença MIT.
