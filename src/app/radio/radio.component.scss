@@ -99,7 +99,7 @@
 
 .botaoRadio {
   background: linear-gradient(135deg, #b01ad61c, #df772134);
-  width: 102%;
+  width: 100%;
   text-align: center;
   background-color: transparent;
 }
@@ -129,10 +129,14 @@
   box-shadow: 0 0 5px #df7621, 0 0 10px #b11ad6; /* Reduz a intensidade da sombra */
 }
 
+.volume {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .volume input[type="range"] {
   -webkit-appearance: none;
-  position: fixed;
-  left: 332px;
   appearance: none;
   width: 500px;
   height: 10px;
