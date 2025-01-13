@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+  <!-- Fundo gradiente -->
+  <defs>
+    <radialGradient id="spaceGradient" cx="50%" cy="50%" r="80%">
+      <stop offset="0%" stop-color="#0d1b2a" />
+      <stop offset="100%" stop-color="#1b263b" />
+    </radialGradient>
+    <radialGradient id="nebulaGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff7eb3" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="transparent" />
+    </radialGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#spaceGradient)" />
+
+  <!-- Nebulosas -->
+  <circle cx="200" cy="150" r="100" fill="url(#nebulaGradient)" />
+  <circle cx="600" cy="400" r="120" fill="url(#nebulaGradient)" />
+ 
+
+  <!-- Estrelas -->
+  <g fill="white">
+    <circle cx="50" cy="50" r="1" />
+    <circle cx="120" cy="200" r="2" />
+    <circle cx="300" cy="100" r="1" />
+    <circle cx="400" cy="300" r="1.5" />
+    <circle cx="500" cy="50" r="1" />
+    <circle cx="650" cy="200" r="2" />
+    <circle cx="700" cy="500" r="1.5" />
+    <circle cx="750" cy="400" r="1" />
+    <circle cx="100" cy="500" r="1.2" />
+    <circle cx="150" cy="350" r="1" />
+  </g>
+
+
+  <!-- Galáxia em espiral -->
+  <g transform="translate(500 150)">
+    <circle r="5" fill="#ffffff" />
+    <circle r="20" fill="none" stroke="#d4f1f4" stroke-width="1" opacity="0.8" />
+    <circle r="40" fill="none" stroke="#bde0fe" stroke-width="1" opacity="0.5" />
+    <circle r="60" fill="none" stroke="#c3aed6" stroke-width="1" opacity="0.3" />
+  </g>
+</svg>

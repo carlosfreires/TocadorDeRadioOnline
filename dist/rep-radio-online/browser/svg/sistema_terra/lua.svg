@@ -1,0 +1,56 @@
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- Definição de gradientes -->
+  <defs>
+    <!-- Gradiente para a Lua -->
+    <radialGradient id="moonGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#dcdcdc" />
+      <stop offset="70%" stop-color="#c0c0c0" />
+      <stop offset="100%" stop-color="#9c9c9c" />
+    </radialGradient>
+
+    <!-- Gradiente para o reflexo solar -->
+    <radialGradient id="sunReflection" cx="30%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="white" stop-opacity="0.7" />
+      <stop offset="70%" stop-color="white" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="white" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Gradiente para as crateras -->
+    <radialGradient id="craterGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#b0b0b0" />
+      <stop offset="100%" stop-color="#9c9c9c" />
+    </radialGradient>
+  </defs>
+
+  <!-- Lua -->
+  <circle cx="150" cy="150" r="120" fill="url(#moonGradient)" />
+
+  <!-- Reflexo solar -->
+  <circle cx="150" cy="150" r="120" fill="url(#sunReflection)" />
+
+  <!-- Crateras -->
+  <circle cx="210" cy="60" r="10" fill="url(#craterGradient)" />
+  <circle cx="205" cy="80" r="4" fill="url(#craterGradient)" />
+  <circle cx="90" cy="230" r="16" fill="url(#craterGradient)" />
+  <circle cx="80" cy="157" r="16" fill="#d2d8d8" />
+  <ellipse cx="110" cy="70" rx="10" ry="5" fill="#d2d8d8" />
+  <circle cx="170" cy="150" r="16" fill="#d3d3d3" />
+  <circle cx="243" cy="100" r="12" fill="url(#craterGradient)" />
+  <circle cx="240" cy="210" r="10" fill="url(#craterGradient)" />
+  <circle cx="100" cy="210" r="4" fill="url(#craterGradient)" />
+  <circle cx="60" cy="150" r="7" fill="#d3d3d3" />
+  <circle cx="50" cy="200" r="4" fill="url(#craterGradient)" />
+  <circle cx="210" cy="110" r="6" fill="url(#craterGradient)" />
+  <circle cx="200" cy="230" r="6" fill="url(#craterGradient)" />
+  <circle cx="40" cy="180" r="5" fill="url(#craterGradient)" />  
+  <circle cx="155" cy="90" r="6" fill="#d3d3d3" />
+  <ellipse cx="120" cy="40" rx="10" ry="3" fill="url(#craterGradient)" />
+  <ellipse cx="190" cy="250" rx="8" ry="10" fill="url(#craterGradient)" />
+  <ellipse cx="120" cy="260" rx="10" ry="3" fill="url(#craterGradient)" />
+  <ellipse cx="170" cy="50" rx="6" ry="7" fill="url(#craterGradient)" />
+  <circle cx="110" cy="180" r="5" fill="#d3d3d3" /> <!-- Cratera mais clara -->
+  <circle cx="160" cy="210" r="4" fill="url(#craterGradient)" />
+  <ellipse cx="130" cy="170" rx="10" ry="5" fill="#e0e0e0" /> <!-- Elipse clara -->
+  <ellipse cx="170" cy="120" rx="6" ry="3" fill="#d3d3d3" />
+  <circle cx="140" cy="200" r="6" fill="#d3d3d3" /> <!-- Cratera mais clara -->
+</svg>
